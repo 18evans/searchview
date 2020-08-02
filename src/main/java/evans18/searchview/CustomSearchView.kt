@@ -72,7 +72,7 @@ class CustomSearchView(context: Context, attrs: AttributeSet?, defStyleAttr: Int
                 val isBlank = editText.text.isBlank()
 
                 onButtonStateShouldChange?.invoke(isBlank, hasFocus)
-                this.onFocusChangeListener.onFocusChange(view, hasFocus) //invoke focus listener of parent
+                this.onFocusChangeListener?.onFocusChange(view, hasFocus) //invoke focus listener of parent
             }
         }
 
